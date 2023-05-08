@@ -1,0 +1,275 @@
+ion-item, .my-checkbox{
+  ion-label{
+    font-size: smaller;
+  }
+  padding: 0 !important;
+}
+
+ion-list, ion-select, ion-select-option{
+  font-family: 'poppins' !important;
+  font-weight: bold;
+  font-size: small;
+  padding: 0;
+}
+
+.checkbox-span-error{
+  color: red; font-size: 0.8rem; margin-left: 2rem;
+  margin-top: -1rem;
+}
+
+
+
+
+// ion-content{
+//   --ion-background-color:rgb(100, 151, 196);
+// }
+
+ion-card{
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: none !important;
+  ion-card-subtitle{
+    padding-top: -1rem !important;
+    font-size: 0.8rem;
+    font-weight: 1000;
+    color: #FA711C;
+    text-transform: capitalize;
+  }
+  margin-bottom: -1rem;
+}
+
+
+.user-logo{
+  height: 60px;
+  width: 60px;
+}
+
+.login-btn{
+  --ion-color-primary: #A0C413;
+  text-align: center;
+  width:6.4rem;
+  height: 1.7rem;
+  font-size: 0.7rem;
+  font-weight: bolder;
+  --background-hover:#FF914D;
+}
+
+.btn-div{
+  margin-top: 1rem;
+  text-align: center;
+}
+
+
+.text-tag{
+  margin-top: 1rem;
+  text-align: center;
+  span{
+    font-size: 0.7rem;
+    font-weight: normal;
+  }
+}
+
+.remember-me-div{
+  text-align: left;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  input{
+    accent-color: #FA711C;
+  }
+  ion-label{
+    font-size: 0.8rem;
+    font-weight: normal;
+    margin-left: 0.3rem;
+  }
+}
+
+
+.my-checkbox {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+ion-item {
+  ion-label, ion-input{
+    font-size: small;
+    font-size: small;
+  }
+  span{
+    font-size: x-small;
+    color: red;
+  }
+  ion-icon{
+    margin-top: 1.5rem;
+  }
+}
+
+ion-input.email {
+  --label-color: #5784E9 !important;
+  --height:5px;
+  font-size: small !important;
+}
+
+
+.google-icon{
+  // margin-top: 2rem;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.facebook-icon{
+  // margin-top: 2rem;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.passwordIcon{
+  font-size:2rem !important;
+  position: relative !important;
+  top: 22px !important;
+  margin: 0 auto !important;
+}
+
+
+ion-segment-button {
+  --indicator-color: #A0C413;
+}
+ion-segment.ios{
+  --background: #FF914D;
+  --height: 2px;
+  --border-radius: 10px !important;
+}
+
+ion-segment.md{
+  --background: #FF914D;
+  --height: 2px;
+}
+
+/* Material Design styles */
+ion-segment-button.md {
+  --color: #fff;
+  --color-checked: #fff;
+  --background-checked: #A0C413;
+}
+
+/* iOS styles */
+ion-segment-button.ios {
+  --color: #fff;
+  --color-checked: #fff;
+  --border-radius: 10px;
+  --background-checked: #A0C413;
+  --height:5px !important;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ion-card{
+//   // padding-top: 3rem;
+//   border-radius: 1rem;
+//   text-align: center;
+//   ion-card-subtitle{
+//     font-size: 0.8rem;
+//     font-weight: bolder;
+//   }
+//   margin-bottom: 1rem;
+// }
+
+// .my-checkbox {
+//   // display: flex;
+//   // align-items: center !important;
+//   // margin-top: 1rem !important;
+//   //
+//   text-align: center;
+//   display: flex;
+//   align-items: center;
+//   ion-label{
+//     margin: 0.5rem;
+//   }
+//   // display:inline-block;
+// }
+
+// .login-btn{
+//   --ion-color-primary: #5784e9;
+//   text-align: center;
+//   width:6.4rem;
+//   height: 1.7rem;
+//   font-size: 0.7rem;
+//   font-weight: bolder;
+// }
+
+// .btn-div{
+//   text-align: center;
+// }
+
+// .text-tag{
+//   margin: 1rem;
+//   text-align: center;
+//   span{
+//     font-size: 13px;
+//     font-weight: normal;
+//     color: rgb(3, 4, 4);
+//   }
+//   // margin-top: 1rem;
+// }
+
+// ion-item, .my-checkbox{
+//   ion-label{
+//     font-size: small;
+//   }
+// }
+
+// ion-list, ion-select, ion-select-option{
+//   font-family: 'poppins' !important;
+//   font-weight: bold;
+//   font-size: small;
+// }
+
+// .checkbox-span-error{
+//   color: red; font-size: 0.8rem; margin-left: 2rem;
+//   margin-top: -1rem;
+// }
+
+// .register-form{
+//   margin-top: -1rem;
+// }
+
+// ion-item {
+//   ion-label{
+//     font-size: small;
+//   }
+//   span{
+//     font-size:x-small;
+//     color: red;
+//   }
+//   ion-icon{
+//     margin-top: 1.5rem;
+//   }
+// }
+
+// ion-row{
+//   margin-bottom: 1.2rem;
+// }
+
+// .passwordIcon{
+//   font-size:2rem !important;
+//   position: relative !important;
+//   top: 22px !important;
+//   margin: 0 auto !important;
+// }

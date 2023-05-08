@@ -1,0 +1,44 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-title>{{'COMMON.validateOtpModalTitle' | translate}}</ion-title>
+    </ion-row>
+    <div class="content">
+      <div class="o-c">
+        <div>
+          <div class="card">
+            <ng-otp-input #ngOtpInput (onInputChange)="onOtpChange($event)" [config]="this.config"></ng-otp-input>
+          </div>
+          <div class="btn-div">
+            <ion-button class="login-btn" type="submit" (click)="onSubmit()" [disabled]="!this.otpIsValid">
+              {{'COMMON.validateBtnTitle' | translate}}
+              <ion-icon slot="end" size="small" name="checkmark"></ion-icon>
+            </ion-button>
+            <ion-button color="danger" size="small" (click)="onCancel()">
+              {{'COMMON.cancelBtnTitle' | translate}}
+              <ion-icon slot="end" size="small" name="close-outline"></ion-icon>
+            </ion-button>
+            <ion-col>
+              <div class="text-tag">
+                <span>
+                  {{'COMMON.otpEmailNotReceived' | translate}}
+                </span>
+                <ion-button slot="end" size="small" (click)="generateOtp()" fill="clear">
+                  <ion-icon name="key-outline" size="small" slot="end"></ion-icon>
+                  <span style="text-transform: lowercase; font-size: 0.7rem;">
+                    {{'COMMON.generateOtp' | translate}}
+                  </span>
+                </ion-button>
+              </div>
+            </ion-col>
+
+          </div>
+        </div>
+      </div>
+      <!-- <ion-item lines="full" style="text-align: center;">
+
+        </ion-item> -->
+
+      </div>
+  </ion-grid>
+</ion-content>

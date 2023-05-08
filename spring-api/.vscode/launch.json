@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch SpringApiApplication",
+            "request": "launch",
+            "mainClass": "com.example.api.SpringApiApplication",
+            "projectName": "spring-api"
+        },
+        {
+            "type": "java",
+            "name": "Launch SpringApiApplication",
+            "request": "launch",
+            "mainClass": "com.example.api.SpringApiApplication",
+            "projectName": "spring-social"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringSocialApplication<spring-social>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.springsocial.SpringSocialApplication",
+            "projectName": "spring-social",
+            "args": ""
+        }
+    ]
+}

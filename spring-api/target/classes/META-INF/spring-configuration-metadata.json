@@ -1,0 +1,59 @@
+{
+  "groups": [
+    {
+      "name": "app",
+      "type": "com.example.api.config.AppProperties",
+      "sourceType": "com.example.api.config.AppProperties"
+    },
+    {
+      "name": "app.auth",
+      "type": "com.example.api.config.AppProperties$Auth",
+      "sourceType": "com.example.api.config.AppProperties",
+      "sourceMethod": "public com.example.api.config.AppProperties.Auth getAuth() "
+    },
+    {
+      "name": "app.oauth2",
+      "type": "com.example.api.config.AppProperties$OAuth2",
+      "sourceType": "com.example.api.config.AppProperties",
+      "sourceMethod": "public com.example.api.config.AppProperties.OAuth2 getOauth2() "
+    },
+    {
+      "name": "twilio",
+      "type": "com.example.api.config.TwilioConfig",
+      "sourceType": "com.example.api.config.TwilioConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.auth.token-expiration-msec",
+      "type": "java.lang.Long",
+      "sourceType": "com.example.api.config.AppProperties$Auth"
+    },
+    {
+      "name": "app.auth.token-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.example.api.config.AppProperties$Auth"
+    },
+    {
+      "name": "app.oauth2.authorized-redirect-uris",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.example.api.config.AppProperties$OAuth2"
+    },
+    {
+      "name": "twilio.account-sid",
+      "type": "java.lang.String",
+      "sourceType": "com.example.api.config.TwilioConfig"
+    },
+    {
+      "name": "twilio.auth-token",
+      "type": "java.lang.String",
+      "sourceType": "com.example.api.config.TwilioConfig"
+    },
+    {
+      "name": "twilio.trial-number",
+      "type": "java.lang.String",
+      "sourceType": "com.example.api.config.TwilioConfig"
+    }
+  ],
+  "hints": []
+}

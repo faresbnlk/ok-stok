@@ -1,0 +1,95 @@
+<ion-content class="ion-padding*">
+  <ion-item style="justify-content: center; font-size: small;">
+    <span>filtrer la recherche</span>
+    <ion-button icon-only color="primary" [disabled]="!activateResetSearchButton()" slot="end" size="small"
+      (click)="onResetSearchProduct()">Annuler
+      <ion-icon name="refresh-circle"></ion-icon>
+    </ion-button>
+  </ion-item>
+  <ion-item [hidden]="selectedWilaya.length > 0">
+    <ion-input class="search-wilaya-input" (ionBlur)="onCursorLeave()" (ionFocus)="onCursorAppear()"
+      (ionChange)="onSearchWilaya($event)" placeholder="Où ?"
+      [(ngModel)]="wilayaInput"></ion-input>
+  </ion-item>
+  <ion-item class="selected-wilaya" [hidden]="selectedWilaya.length <= 0">
+    Wilaya : <span>{{selectedWilaya}}</span>
+  </ion-item>
+  <ion-list class="suggestions-list">
+    <ion-item style="font-size: x-small;" (click)="onWilClick(wil)" lines="full" *ngFor="let wil of wilayaNames">
+      {{wil}}
+    </ion-item>
+  </ion-list>
+  <!-- <span id="open-custom-dialog" expand="block" Open Custom Dialog>Autour de moi</span>
+    <ion-icon id="open-custom-dialog" expand="block" name="location"></ion-icon>
+  <ion-modal id="example-modal" #modal trigger="open-custom-dialog">
+    <ng-template>
+      <div class="wrapper">
+        <ion-label>Utiliser ma position ?</ion-label>
+        <ion-button (click)="onAccepteLocation()" id="yes" size="small">oui</ion-button>
+        <ion-button (click)="onDeclineLocation()" id="non" size="small">non</ion-button>
+      </div>
+    </ng-template>
+  </ion-modal> -->
+  <!-- <ion-item *ngIf="apiService.showLocationFilter && !resetKnob" class="km-filter">
+    <ion-range dir="ltr" (ionChange)="onIonRangeChanges($event)" [step]="5" [min]="0" [max]="200"></ion-range>
+    <span>{{rangeValue}} Kms</span>
+  </ion-item>
+  <ion-item *ngIf="apiService.showLocationFilter && resetKnob" class="km-filter">
+    <ion-range dir="ltr" (ionChange)="onIonRangeChanges($event)" [step]="5" [min]="0" [max]="200"></ion-range>
+    <span>{{rangeValue}} Kms</span>
+  </ion-item> -->
+  <ion-item *ngIf="showProducts">
+    <ion-select #select [(ngModel)]="selectedSub" (ionChange)="onSelectSubCat($event)" placeholder="sous-catégorie">
+      <ion-select-option *ngFor="let subCats of subCategories">
+        <ion-icon name="desktop-outline"></ion-icon>
+        {{subCats.name}}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item *ngIf="showProducts">
+    <ion-select [(ngModel)]="selectedField" #select (ionChange)="onSelectSort($event)" placeholder="trier par :" >
+      <ion-select-option value="price_desc">
+        Prix - Ordre décroissant
+      </ion-select-option>
+      <ion-select-option value="price_asc">
+        Prix - Ordre croissant
+      </ion-select-option>
+      <ion-select-option value="reviews_avrg">
+        Moyenne des commentaires
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item *ngIf="showProducts">
+    <span class="used-product-label">occasion </span>
+    <ion-toggle color="primary" [(ngModel)]="checked" (ionChange)="onIsUsedChecked($event)"></ion-toggle>
+  </ion-item>
+  <ion-grid *ngIf="showProducts">
+    <ion-row>
+      <ion-col class="product-img" (click)="onProductObjectClick(product)" size="6" *ngFor="let product of apiService.products">
+      <ion-card>
+        <ion-card-header>
+          <ion-img [src]="getFirstImageUrl(product)"></ion-img>
+        </ion-card-header>
+        <ion-card-content>
+          <p>
+            {{product.name}}
+          </p>
+        </ion-card-content>
+      </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="apiService.products.length === 0" class="ion-align-items-center">
+      <ion-col size="12">
+        <img src="../../../assets/images/not-found.png" class="not-found-illust">
+      </ion-col>
+      <ion-item>
+        <ion-text>
+          Nous sommes désolés, Aucun produit trouvé !
+        </ion-text>
+      </ion-item>
+      </ion-row>
+    <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </ion-grid>
+</ion-content>

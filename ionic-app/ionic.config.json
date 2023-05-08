@@ -1,0 +1,9 @@
+{
+  "name": "base-mobile-app",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "970af3cf"
+}

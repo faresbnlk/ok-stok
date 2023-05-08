@@ -1,0 +1,121 @@
+<ion-content>
+  <ion-card class="ion-no-margin">
+    <img src="../../../assets/images/bg-1.png">
+    <ion-card-subtitle>{{'LOGIN.loginTitle' | translate}}</ion-card-subtitle>
+    <ion-card-content>
+      <div class="wrapform">
+            <ion-segment (ionChange)="segmentChanged($event)">
+              <ion-segment-button value="phone">
+                <ion-icon name="call-sharp"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="email">
+                <ion-icon name="mail"></ion-icon>
+              </ion-segment-button>
+            </ion-segment>
+        <form *ngIf="this.selectedForm === 'email'" [formGroup]="loginForm" class="login-form">
+          <ion-item lines="full">
+            <ion-label position="floating">{{'LOGIN.emailInputLabel' | translate}}</ion-label>
+            <ion-input type="email" id="email" [formControlName]="'email'" name="email" required autofocus></ion-input>
+            <span *ngIf="!loginForm.get('email')?.valid && loginForm.get('email')?.touched">
+              {{'ERROR.emailFormValidation' | translate}}
+            </span>
+          </ion-item>
+
+          <ion-item lines="full">
+            <ion-label position="floating">{{'LOGIN.passwordInputLabel' | translate}}</ion-label>
+            <ion-input *ngIf="showPassword" type="text" id="password" [formControlName]="'password'" name="password" required></ion-input>
+            <ion-icon (click)="hideShowPassword()" *ngIf="showPassword" slot="end" name="eye-outline"></ion-icon>
+            <ion-input *ngIf="!showPassword" type="password" id="password" [formControlName]="'password'" name="password" required></ion-input>
+            <ion-icon (click)="hideShowPassword()" *ngIf="!showPassword"slot="end" name="eye-off-outline"></ion-icon>
+            <span *ngIf="!loginForm.get('password')?.valid && loginForm.get('password')?.touched">
+              {{'ERROR.passwordFormValidation' | translate}}
+            </span>
+          </ion-item>
+          <ion-row>
+            <ion-col>
+              <div float-right class="remember-me-div">
+                <input (change)="toggleValue($event)" type="checkbox" name="remeberMe">
+                <ion-label>{{'LOGIN.remeberMeLabel' | translate}}</ion-label>
+              </div>
+            </ion-col>
+          </ion-row>
+          <div class="btn-div">
+            <ion-button class="login-btn" type="submit" (click)="onSubmit()" [disabled]="!this.loginForm.valid">{{'LOGIN.loginBtnTitle' | translate}}
+            </ion-button>
+          </div>
+        </form>
+
+        <form *ngIf="this.selectedForm === 'phone'" [formGroup]="loginFormPhone" class="login-form">
+          <ion-item lines="full">
+            <ion-label position="floating">{{'LOGIN.phoneInputLabel' | translate}}</ion-label>
+            <ion-input type="tel" id="phone" [formControlName]="'phone'" name="phone" required autofocus></ion-input>
+            <span *ngIf="!loginFormPhone.get('phone')?.valid && loginFormPhone.get('phone')?.touched">
+              {{'ERROR.phoneFormValidation' | translate}}
+            </span>
+          </ion-item>
+
+          <ion-item lines="full">
+            <ion-label position="floating">{{'LOGIN.passwordInputLabel' | translate}}</ion-label>
+            <ion-input *ngIf="showPassword" type="text" id="password" [formControlName]="'password'" name="password" required></ion-input>
+            <ion-icon (click)="hideShowPassword()" *ngIf="showPassword" slot="end" name="eye-outline"></ion-icon>
+            <ion-input *ngIf="!showPassword" type="password" id="password" [formControlName]="'password'" name="password" required></ion-input>
+            <ion-icon (click)="hideShowPassword()" *ngIf="!showPassword"slot="end" name="eye-off-outline"></ion-icon>
+            <span *ngIf="!loginForm.get('password')?.valid && loginForm.get('password')?.touched">
+              {{'ERROR.passwordFormValidation' | translate}}
+            </span>
+          </ion-item>
+          <ion-row>
+            <ion-col>
+              <div float-right class="remember-me-div">
+                <input (change)="toggleValue($event)" type="checkbox" name="remeberMe">
+                <ion-label>{{'LOGIN.remeberMeLabel' | translate}}</ion-label>
+              </div>
+            </ion-col>
+          </ion-row>
+          <div class="btn-div">
+            <ion-button class="login-btn" type="submit" (click)="onSubmitPhone()" [disabled]="!this.loginFormPhone.valid">{{'LOGIN.loginBtnTitle' | translate}}
+            </ion-button>
+          </div>
+        </form>
+      </div>
+    </ion-card-content>
+    <!-- <ion-card-header>
+      <ion-card-subtitle>{{'LOGIN.loginTitle' | translate}}</ion-card-subtitle>
+    </ion-card-header> -->
+
+  </ion-card>
+
+  <div class="text-tag">
+    <span>
+      {{'LOGIN.notRegistredYet' | translate}} <a [routerLink]="['/pages/register']">{{'LOGIN.creatAccountLabel' | translate}}</a>
+    </span>
+  </div>
+  <div class="text-tag">
+    <ion-button  slot="end" size="small" (click)="openForgotPassModal()" fill="clear">
+      <ion-icon name="key-outline" size="small" slot="end"></ion-icon>
+      <span style="text-transform: lowercase; font-size: 0.7rem;">
+        {{'LOGIN.forgotPasswordLabel' | translate}}
+      </span>
+    </ion-button>
+  </div>
+  <!--<div class="text-tag">
+    <span>
+      Se connecter avec Google/Facebook
+    </span>
+  </div>
+   <ion-grid>
+    <ion-row>
+      <ion-col size="3" offset="4">
+        <a [href]="getLoginPage('google')">
+        <img class="google-icon" src=".././../assets/icon/google-icon.png" alt="Hello image" />
+      </a>
+      </ion-col>
+      <ion-col size="3">
+        <a [href]="getLoginPage('facebook')">
+        <img class="facebook-icon" src=".././../assets/icon/facebook-icon.png" alt="Hello image" />
+      </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+  <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
+</ion-content>

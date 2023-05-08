@@ -1,0 +1,117 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+/* Import swiper styles*/
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+
+@font-face {
+  font-family: 'poppins';    //This is what we are going to call
+  src: url('./assets/fonts/Poppins-Light.ttf');
+}
+
+* {
+  font-family: 'poppins' !important;
+  font-weight: bold;
+}
+
+ion-toast.my-toast-success {
+  --background: #1ea871;
+  --box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+  --color: #ffffff;
+  text-align: center;
+}
+
+ion-toast.my-toast-error {
+  --background: #b43b3b;
+  --box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+  --color: #ffffff;
+  text-align: center;
+}
+
+ion-toast.my-toast-info {
+  --background: #1e65a8;
+  --box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+  --color: #ffffff;
+  text-align: center;
+}
+
+
+ion-toast.my-toast::part(button) {
+  border-left: 1px solid #d2d2d2;
+  color: #030207;
+  font-size: 15px;
+}
+
+
+.my-custom-modal-css .modal-wrapper {
+  height: 20%;
+  top: 80%;
+  position: absolute;
+  display: block;
+}
+
+.wilaya-input{
+  --color: #373737;
+  --placeholder-color: var(--ion-color-primary);
+  --placeholder-font-size: smaller;
+  --padding-end: 5vw;
+  --padding-start: 5vw;
+}
+
+.wilaya-input input::placeholder{
+  font-size: x-small;
+}
+
+
+.selected-wilaya{
+  padding-left: 2vw;
+  padding-right: 2vw;
+  color: var(--ion-color-primary);
+  font-size: small;
+  span{
+    border: solid 2px var(--ion-color-secondary);
+    border-radius: 10px;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+}
+
+.search-wilaya-input{
+  margin-left: 2vw;
+  margin-right: 2vw;
+  color: var(--ion-color-primary);
+}
+
+.suggestions-list{
+  margin-left: 2vw;
+  margin-right: 2vw;
+  // ion-item{
+  //   color: var(--ion-color-secondary);
+  // }
+}

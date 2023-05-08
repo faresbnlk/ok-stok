@@ -1,0 +1,62 @@
+<ion-content class="ion-padding*">
+  <ion-item style="justify-content: center; font-size: small;">
+    <span>filtrer la recherche</span>
+    <ion-button icon-only color="primary" [disabled]="!activateUsedCheckedButton()" slot="end" size="small"
+      (click)="onResetSearchProduct()">Annuler
+      <ion-icon name="refresh-circle"></ion-icon>
+    </ion-button>
+  </ion-item>
+  <!-- <ion-item *ngIf="apiService.showGetLocationButton" class="ion-text-center">
+    <span id="open-custom-dialog" expand="block" Open Custom Dialog>Autour de moi</span>
+    <ion-icon id="open-custom-dialog" expand="block" name="location"></ion-icon>
+  </ion-item>
+  <ion-modal id="example-modal" #modal trigger="open-custom-dialog">
+    <ng-template>
+      <div class="wrapper">
+        <ion-label>Utiliser ma position ?</ion-label>
+        <ion-button (click)="onAccepteLocation()" id="yes" size="small">oui</ion-button>
+        <ion-button (click)="onDeclineLocation()" id="non" size="small">non</ion-button>
+      </div>
+    </ng-template>
+  </ion-modal>
+  <ion-item *ngIf="apiService.showLocationFilter" class="km-filter">
+    <ion-range dir="ltr" (ionChange)="onIonRangeChanges($event)" [step]="5" [min]="0" [max]="200"></ion-range>
+    <span>{{rangeValue}} Kms</span>
+  </ion-item> -->
+  <ion-item>
+    <span class="used-product-label">occasion </span>
+    <ion-toggle color="primary" [(ngModel)]="checked" (ionChange)="onIsUsedChecked($event)"></ion-toggle>
+  </ion-item>
+  <ion-item [hidden]="selectedWilaya.length > 0">
+    <ion-input class="search-wilaya-input" (ionBlur)="onCursorLeave()" (ionFocus)="onCursorAppear()"
+      (ionChange)="onSearchWilaya($event)" placeholder="Où ?" [(ngModel)]="wilayaInput"></ion-input>
+  </ion-item>
+  <ion-item class="selected-wilaya" [hidden]="selectedWilaya.length <= 0">
+    Wilaya : <span>{{selectedWilaya}}</span>
+  </ion-item>
+  <ion-list class="suggestions-list">
+    <ion-item style="font-size: x-small;" (click)="onWilClick(wil)" lines="full" *ngFor="let wil of wilayaNames">
+      {{wil}}
+    </ion-item>
+  </ion-list>
+
+  <ion-grid *ngIf="showProducts">
+    <ion-row>
+      <ion-col class="product-img" (click)="onProductObjectClick(product)" size="6" *ngFor="let product of apiService.products">
+      <ion-card>
+        <ion-card-header>
+          <ion-img [src]="getFirstImageUrl(product)"></ion-img>
+        </ion-card-header>
+        <ion-card-content>
+          <p>
+            {{product.name}}
+          </p>
+        </ion-card-content>
+      </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </ion-grid>
+</ion-content>

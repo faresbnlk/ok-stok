@@ -1,0 +1,18 @@
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-row class="message-row">
+        <p>
+          {{message}}
+        </p>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-row class="btn-row">
+    <ion-col class="btn-row">
+      <ion-button size="small" (click)="onClose()">{{closeBtnTitle}}
+        <ion-icon slot="end" name="close"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

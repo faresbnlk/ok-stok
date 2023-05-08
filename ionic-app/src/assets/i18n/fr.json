@@ -1,0 +1,398 @@
+{
+  "COMMON": {
+    "validateBtnTitle": "Valider",
+    "closeBtnTitle": "Fermer",
+    "cancelBtnTitle": "Annuler",
+    "resetPasswordModalTitle": "Réinitialiser le mot passe",
+    "fillNewPasswordModalTitle": "Saisir le nouveau mot passe",
+    "otpSendByEmailForRestPassword": "Un code vient d'être envoyé par e-mail, merci de le saisir afin de poursuivre la procédure de réinitialisation de mot de passe",
+    "otpSendBySMSForRestPassword": "Un code vient d'être envoyé par sms, merci de le saisir afin de poursuivre la procédure de réinitialisation de mot de passe",
+    "validateOtpModalTitle": "Vérification du code",
+    "otpInputLabel": "Code reçu par e-mail",
+    "otpEmailNotReceived": "Vous n'avez pas reçu le code ?",
+    "generateOtp": "Régénérer",
+    "otpValidated" : "Code validé !",
+    "passwordHasBeenReset": "Mot de passe réinitialisé !"
+  },
+
+  "HOME": {
+    "title": "Accueil",
+    "greeting": "Bonjour {{email}} ! Bienvenue dans App base",
+    "withcode": "<h1> Test de code </h1>",
+    "btn": "Afficher Alert",
+    "notConnected": "Vous n'êtes pas connecté !"
+  },
+
+  "ACCOUNT": {
+    "headerTitle": "Profil"
+  },
+
+  "LOGIN": {
+    "headerTitle": "Connexion",
+    "loginTitle" : "Connexion",
+    "loginSucceedMessage": "Connecté",
+    "emailInputLabel": "E-mail",
+    "phoneInputLabel": "Téléphone",
+    "passwordInputLabel": "Mot de passe",
+    "loginBtnTitle": "Se connecter",
+    "notRegistredYet": "Pas encore inscrit ?",
+    "creatAccountLabel": "Créer un compte",
+    "remeberMeLabel": "Se souvenir de moi",
+    "forgotPasswordLabel": "Mot de passe oublié ?"
+  },
+  "REGISTER": {
+    "headerTitle": "Inscription",
+    "registerSucceedMessage": "Compte créé avec succès",
+    "registerFailMessage": "Erreur lors de la création du compte",
+    "emailVerificationSent": "Merci de vérifier votre e-mail"
+  },
+
+  "ERROR": {
+    "auth": "Erreur d'authentification",
+    "forbidden": "Accès interdit",
+    "notFound": "Demande introuvable",
+    "notAuthorized": "Demande non autorisrée",
+    "notAccepted": "Demande non accptée",
+    "timeOut": "Temps d'attente écoulé",
+    "formatNotSupported": "Format non supporté",
+    "lockedResource": "Ressource verrouillée",
+    "expiredOrInvalidSession": "Session a expiré ou est invalide",
+    "wrongPassword": "Mot de passe incorrect",
+    "unknownEmail": "Aucun compte associé à cet e-mail",
+    "unknownPhone": "Aucun compte associé à ce numéro",
+    "emailNotVerified": "E-mail non verifié",
+    "emailNotFoundOrNotVerified": "E-mail inconnu ou non vérifié",
+    "phoneNotFoundOrNotVerified": "N° inconnu ou non vérifié",
+    "emailAlreadyExists": "Un compte a été déjà crée avec cet e-mail",
+    "phoneAlreadyExists": "Un compte a été déjà crée avec ce numéro",
+    "default": "Erreur système, contactez l'amdin",
+    "emailFormValidation": "E-mail invalide",
+    "phoneFormValidation": "N° de téléphone invalide",
+    "passwordFormValidation" :"Mot de passe trop court",
+    "passwordConfirmation" : "La confirmation est invalide",
+    "otpFormValidation": "Le code doit contenir 6 chiffres",
+    "otpNotValidated" : "Code erroné !",
+    "errorpasswordReset": "Erreur, mot de passe n'est pas réinitialisé"
+  },
+
+  "CATEGORY": {
+    "WOMAN_CLOTHING": {
+        "NAME": "Mode Femme",
+        "wedding": {
+            "NAME": "french subcat name"
+        },
+        "under_wears_pyjamas": {
+            "NAME": "french subcat name"
+        },
+        "shoses_tongs_boots": {
+            "NAME": "french subcat name"
+        },
+        "dresses_skirt_pants": {
+            "NAME": "french subcat name"
+        },
+        "pulls_sweats_shirts": {
+            "NAME": "french subcat name"
+        },
+        "jackets_coats": {
+            "NAME": "french subcat name"
+        },
+        "classic": {
+            "NAME": "french subcat name"
+        },
+        "other": {
+            "NAME": "french subcat name"
+        }
+    },
+    "MAN_CLOTHING": {
+        "NAME": "Mode Homme",
+        "under_wears_pyjamas": {
+            "NAME": "french subcat name"
+        },
+        "shoses_sandales_tongs": {
+            "NAME": "french subcat name"
+        },
+        "shorts_joggings_pants": {
+            "NAME": "french subcat name"
+        },
+        "pulls_sweats_shirts": {
+            "NAME": "french subcat name"
+        },
+        "jackets_coats": {
+            "NAME": "french subcat name"
+        },
+        "classic": {
+            "NAME": "french subcat name"
+        },
+        "other": {
+            "NAME": "french subcat name"
+        }
+     },
+    "PHONE_ACCESSORIES": {
+        "NAME": "Téléphonie & Accessooires",
+        "phones": {
+            "NAME": "french subcat name"
+        },
+        "tabletts": {
+            "NAME": "french subcat name"
+        },
+        "accessories": {
+            "NAME": "french subcat name"
+        }
+    },
+    "HOME_FURNITURE": {
+        "NAME": "Meubles & Maison",
+        "room": {
+            "NAME": "french subcat name"
+        },
+        "living_room": {
+            "NAME": "french subcat name"
+        },
+        "kitchen": {
+            "NAME": "french subcat name"
+        },
+        "bath_room_toilets": {
+            "NAME": "french subcat name"
+        },
+        "terrace_garden": {
+            "NAME": "french subcat name"
+        },
+        "animals": {
+            "NAME": "french subcat name"
+        },
+        "outdoor": {
+            "NAME": "french subcat name"
+        },
+        "other": {
+            "NAME": "french subcat name"
+        }
+    },
+    "BAZAR": {
+        "NAME": "Bazar",
+        "toys": {
+            "NAME": "french subcat name"
+        },
+        "paper_office_supplies": {
+            "NAME": "french subcat name"
+        },
+        "umbrella_beach_umbrella": {
+            "NAME": "french subcat name"
+        },
+        "shop_supplies": {
+            "NAME": "french subcat name"
+        },
+        "other": {
+            "NAME": "french subcat name"
+        }
+    },
+    "SPORT_HOBBIES": {
+        "NAME": "Sport & Loisirs",
+        "wears_equipments": {
+            "NAME": "french subcat name"
+        },
+        "fishing_hunting": {
+            "NAME": "french subcat name"
+        },
+        "bycycles_and_accessories": {
+            "NAME": "french subcat name"
+        },
+        "fitness_body_building_nutrition": {
+            "NAME": "french subcat name"
+        },
+        "other": {
+            "NAME": "french subcat name"
+        }
+    },
+    "COSMETICS_BEAUTY": {
+        "NAME": "Cosmétiques & Beauté",
+        "hair": {
+            "NAME": "french subcat name"
+        },
+        "face_corps": {
+            "NAME": "french subcat name"
+        },
+        "perfumes_deodorant": {
+            "NAME": "french subcat name"
+        },
+        "makeup_nails": {
+            "NAME": "french subcat name"
+        },
+        "other": {
+            "NAME": "french subcat name"
+        }
+    },
+    "ART_CRAFT": {
+        "NAME": "Artisanat",
+        "fine_arts": {
+            "NAME": "french subcat name"
+        },
+        "plumber_mason": {
+            "NAME": "french subcat name"
+        },
+        "painting_plastering": {
+            "NAME": "french subcat name"
+        },
+        "butcher_carter_fish": {
+            "NAME": "french subcat name"
+        },
+        "baker_pastry": {
+            "NAME": "french subcat name"
+        },
+        "sewing_haberdashery": {
+            "NAME": "french subcat name"
+        },
+        "choclat_chesse_ice": {
+            "NAME": "french subcat name"
+        },
+        "carpenter_mettalurgy": {
+            "NAME": "french subcat name"
+        },
+        "other": {
+            "NAME": "french subcat name"
+        }
+    },
+    "HOME_APPLIANCE": {
+        "NAME": "Electroménager",
+        "washing_drying": {
+            "NAME": "french subcat name"
+        },
+        "cold": {
+            "NAME": "french subcat name"
+        },
+        "heat": {
+            "NAME": "french subcat name"
+        },
+        "cooking": {
+            "NAME": "french subcat name"
+        },
+        "baker_pastry": {
+            "NAME": "french subcat name"
+        },
+        "small_kitchen_appliances": {
+            "NAME": "french subcat name"
+        },
+        "other": {
+            "NAME": "french subcat name"
+        }
+    },
+    "AUTO_MOTO": {
+        "NAME": "Auto & Moto",
+        "car_part": {
+            "NAME": "french subcat name"
+        },
+        "moto_part": {
+            "NAME": "french subcat name"
+        },
+        "moto_equipment": {
+            "NAME": "french subcat name"
+        },
+        "auto_equipment": {
+            "NAME": "french subcat name"
+        },
+        "tooling": {
+            "NAME": "french subcat name"
+        },
+        "other": {
+            "NAME": "french subcat name"
+        }
+    },
+	"COMPUTER": {
+	    "NAME": "Informatique",
+	    "pc_laptop": {
+	        "NAME": "french subcat name"
+	    },
+	    "softwares_programs": {
+	        "NAME": "french subcat name"
+	    },
+	    "monitor_accessories": {
+	        "NAME": "french subcat name"
+	    },
+	    "printer_scanner": {
+	        "NAME": "french subcat name"
+	    },
+	    "servers_hardware": {
+	        "NAME": "french subcat name"
+	    },
+	    "gaming": {
+	        "NAME": "french subcat name"
+	    },
+	    "other": {
+	        "NAME": "french subcat name"
+	    }
+	},
+    "TV_PHOTO_VIDEO_SOUND": {
+        "NAME": "TV, Audio, Vidéo & Son",
+        "tv": {
+            "NAME": "french subcat name"
+        },
+        "baffles_speakers": {
+            "NAME": "french subcat name"
+        },
+        "photo_camera": {
+            "NAME": "french subcat name"
+        },
+        "header_earphone": {
+            "NAME": "french subcat name"
+        },
+        "sono_dj": {
+            "NAME": "french subcat name"
+        },
+        "video_projecto": {
+            "NAME": "french subcat name"
+        },
+        "other": {
+            "NAME": "french subcat name"
+        }
+    },
+    "WATCH_JEWERLY": {
+        "NAME": "Montres & Bijoux",
+        "watch_jewerly_man": {
+            "NAME": "french subcat name"
+        },
+        "watch_jewerly_woman": {
+            "NAME": "french subcat name"
+        },
+        "sunglasses_man": {
+            "NAME": "french subcat name"
+        },
+        "sunglasses_woman": {
+            "NAME": "french subcat name"
+        },
+        "other": {
+            "NAME": "french subcat name"
+        }
+    },
+    "BAGS_LAGGAGE": {
+        "NAME": "Sacs & Bagages",
+        "suitcase": {
+            "NAME": "french subcat name"
+        },
+        "shopping_bag_tote": {
+            "NAME": "french subcat name"
+        },
+        "backpack": {
+            "NAME": "french subcat name"
+        },
+        "satchel_wallet": {
+            "NAME": "french subcat name"
+        },
+        "other": {
+            "NAME": "french subcat name"
+        }
+    },
+    "KIDS_BABY": {
+      "NAME": "Enfant& Bébé",
+      "kid_baby_clothing": {
+          "NAME": "Vêtements"
+      },
+      "care_hygiene": {
+          "NAME": "Soins & Hygiène"
+      },
+      "equipments": {
+          "NAME": "Equipement"
+      },
+      "other": {
+          "NAME": "Autres"
+      }
+  }
+}
+}

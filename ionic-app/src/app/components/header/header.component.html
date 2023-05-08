@@ -1,0 +1,21 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="2">
+        <img src="../../../assets/images/logo.png" class="logo ion-text-left">
+      </ion-col>
+      <ion-col size="10">
+        <div class="navbar" class="ion-text-center">
+          <ion-button fill="clear" routerLink="/pages/home" routerDirection="root" routerLinkActive="active-link"
+            class="link">
+            {{homeTitle}}
+          </ion-button>
+          <ion-button fill="clear" routerLink="/pages/account" routerDirection="root" routerLinkActive="active-link"
+            class="link">
+            {{accountTitle}}
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>

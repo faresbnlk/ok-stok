@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <img class="logo-class" src="../../../assets/icon/logo.png">
+    <ion-button *ngIf="translateConfigService.currentLang === 'fr'" slot="end" size="small"
+      (click)="openLanguagePopover($event)" color="white">
+      <img [src]="languages![0].img" slot="start" class="img-class">
+      <span>{{languages![0].text}}</span></ion-button>
+    <ion-button *ngIf="translateConfigService.currentLang === 'ar'" slot="end" size="small"
+      (click)="openLanguagePopover($event)" color="white">
+      <img [src]="languages![1].img" slot="start" class="img-class">
+    <span>{{languages![1].text}}</span></ion-button>
+  </ion-toolbar>
+</ion-header>

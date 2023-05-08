@@ -1,0 +1,70 @@
+{
+  "COMMON": {
+    "validateBtnTitle": "اكد",
+    "closeBtnTitle": "اغلق",
+    "cancelBtnTitle": "الغاء",
+    "resetPasswordModalTitle": "إعادة تعيين كلمة السر",
+    "fillNewPasswordModalTitle": "أدخل كلمة السر الجديدة",
+    "otpSendByEmailForRestPassword": "تم إرسال رمز للتو عبر البريد الإلكتروني ، يرجى إدخاله لمتابعة إجراأت إعادة تعيين كلمة السر ",
+    "otpSendBySMSForRestPassword": "تم إرسال رمز للتو عبر الهاتف ، يرجى إدخاله لمتابعة إجراأت إعادة تعيين كلمة السر",
+    "validateOtpModalTitle": "التحقق من الرمز",
+    "otpInputLabel": "الرمز",
+    "otpEmailNotReceived": "لم يصلك الرمز؟",
+    "generateOtp": "تجديد",
+    "otpValidated" : "تم التحقق من الرمز",
+    "passwordHasBeenReset": "تم إعادة تعين كلمة السر"
+  },
+
+  "HOME": {
+    "title": "الرئيسية",
+    "greeting": "مرحبًا {{email}}! مرحبًا بك في قاعدة التطبيقات",
+    "withcode": "<h1> اختبار الكود </h1>",
+    "btn": "إظهار التنبيه",
+    "notConnected": "أنت غير متصل!"
+  },
+
+  "LOGIN": {
+    "loginTitle" : "تسجيل الدخول",
+    "loginSucceedMessage": "تسجيل الدخول",
+    "emailInputLabel": "البريد الإلكتروني",
+    "phoneInputLabel": "هاتف",
+    "passwordInputLabel": "كلمة السر",
+    "loginBtnTitle": "  ",
+    "notRegistredYet": "غير مسجل ؟",
+    "creatAccountLabel": "انشئ حساب",
+    "remeberMeLabel": "احتفظ بمعلوماتي",
+    "forgotPasswordLabel": "هل نسيت كلمة السر؟"
+  },
+  "REGISTER": {
+    "registerSucceedMessage": "تم التسجيل بنجاح",
+    "emailVerificationSent": "الرجاء من التئكيد"
+  },
+  "ERROR": {
+    "auth": "خطأ في المصادقة",
+    "forbidden": "الدخول محظور",
+    "notFound": "الطلب غير موجود",
+    "notAuthorized": "الطلب غير مصرح به",
+    "notAccepted": "الطلب غير مقبول",
+    "timeOut": "انقضى وقت الانتظار",
+    "formatNotSupported": "التنسيق غير مدعوم",
+    "lockedResource": "المورد مغلق",
+    "expiredOrInvalidSession": "انتهت الجلسة أو أنها غير صالحة",
+    "wrongPassword": "كلمة سر خاطئة",
+    "unknownEmail": "لا يوجد حساب بهذا البريد الإلكتروني",
+    "unknownPhone": "لا يوجد حساب بهذا الرقم",
+    "emailNotVerified": "لم يتم التحقق من البريد الإلكتروني",
+    "phoneNotVerified": "لم يتم التحقق من هذا الرقم",
+    "emailNotFoundOrNotVerified": "بريد إلكتروني غير موجود أو لم يتم التحقق منه",
+    "phoneNotFoundOrNotVerified": "الرقم غير موجود أو لم يتم التحقق منه",
+    "emailAlreadyExists": "تم إنشاء حساب سابقًا باستخدام هذا البريد الإلكتروني",
+    "phoneAlreadyExists": "تم إنشاء حساب بهذا الرقم",
+    "default": "خطأ في النظام ، اتصل بالمسؤول",
+    "emailFormValidation": "بريد إلكتروني خاطئ",
+    "phoneFormValidation": "رقم الهاتف خاطئ",
+    "passwordFormValidation" :"كلمة المرور قصيرة",
+    "passwordConfirmation" : "التأكيد خاطئ",
+    "otpFormValidation": "الرمز متكون من 6 ارقام",
+    "otpNotValidated" : "الرمز خاطئ",
+    "errorpasswordReset": "خلل٫ لم يتم إعادة تعيين كلمة السر"
+  }
+}

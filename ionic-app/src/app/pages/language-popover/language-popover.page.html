@@ -1,0 +1,9 @@
+<ion-list>
+  <ion-item button *ngFor="let lang of languages" (click)="selectLanguage(lang.value)" detail="false" style="text-align: center;">
+    <img [src]="lang.img" slot="start" class="img-class">
+    <ion-label tewt-wrap>{{lang.text}}</ion-label>
+    <div >
+      <ion-icon *ngIf="lang.value === selectedLanguage" slot="end" name="checkmark-circle"></ion-icon>
+    </div>
+  </ion-item>
+</ion-list>

@@ -1,0 +1,10 @@
+<ion-app [dir]="changeDirFromLang(this.translateConfigService.currentLang)">
+  <app-mobile-header  *ngIf="isPhone && sharedService.notProductViewPage">
+  </app-mobile-header>
+  <ion-content>
+    <app-maintenace *ngIf="!sharedService.isBackendAlive"></app-maintenace>
+    <app-spinner></app-spinner>
+    <ion-router-outlet *ngIf="sharedService.isBackendAlive">
+    </ion-router-outlet>
+  </ion-content>
+</ion-app>

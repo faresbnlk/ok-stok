@@ -1,0 +1,30 @@
+.img-class{
+  height: 2vh;
+  width: 8vw;
+  padding: 0px;
+  margin: 0px;
+}
+
+.logo-class{
+  height: 8vh;
+  width: 25vw;
+  margin-left: 7vw;
+  margin-right: 7vw;
+}
+
+.app-header{
+  border: none;
+}
+
+ion-button{
+  margin: 5vw;
+  padding: 0px;
+  box-shadow: rgba(1, 1, 1, 0.867);
+  background-color: #FFFFFF !important;
+  span{
+    color: var(--ion-color-primary);
+    font-size: x-small;
+    margin: 1vw;
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,369 @@
+// Custom variables
+// Note:  These ones were added by us and have nothing to do with Ionic CSS Custom Properties
+:host {
+  --page-margin: var(--app-narrow-margin);
+
+  --page-categories-gutter: calc(var(--page-margin) / 4);
+
+  --page-category-background: var(--ion-color-medium);
+  --page-category-background-rgb: var(--ion-color-medium-rgb);
+}
+
+.used-product-label{
+  font-family: --ion-font-family;
+  font-size: small;
+}
+
+ion-content{
+  font-family: --ion-font-family;
+}
+
+ion-select {
+  font-family: --ion-font-family;
+  --placeholder-color: #000000;
+  --placeholder-opacity: 1;
+  width: 100%;
+  font-size: small;
+}
+
+ion-select::part(placeholder),
+ion-select::part(text) {
+  flex: 0 0 auto;
+}
+
+ion-toogle{
+  &:checked {
+    background: var(--ion-color-primary);
+  }
+
+  ion-icon {
+    color: var(--ion-color-secondary);
+  }
+}
+
+ion-select::part(text) {
+  color: var(--ion-color-primary) ;
+}
+
+ion-select::part(icon) {
+  color: var(--ion-color-secondary);
+  opacity: 1;
+}
+
+ion-toggle{
+  --icon-size: 5px !important;
+}
+
+.sub-cat-name-span{
+  font-size: x-small;
+}
+
+ion-searchbar{
+  border-radius: 5px;
+}
+ion-item-divider{
+  ion-label{
+    text-align: center !important;
+    color: #000;
+  }
+  text-align: center !important;
+  background-color: #70df70;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+}
+
+.one-cat{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+  border-radius: 10px;
+  border: solid var(--ion-color-primary);
+  height: 10vh;
+  width: 20vw;
+  text-align: center !important;
+  img{
+    height: auto;
+    width: auto;
+  }
+  margin-top: 3vh;
+}
+
+.cat-list{
+  padding-top: 2vh;
+  padding-left: 6vw;
+  text-align: center !important;
+}
+
+.cat-name-span{
+  text-align: center !important;
+  position: absolute;
+  bottom: -3vh;
+  margin: auto;
+  text-align: center;
+  width: inherit;
+  left: 0;
+  right: 0;
+  font-size: 4vw;
+  font-size: 1.1vh;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  word-break: break-word;
+  white-space: pre-wrap;
+  -moz-white-space: pre-wrap;
+}
+
+ion-button{
+  text-transform: lowercase;
+}
+
+// Note:  All the CSS variables defined below are overrides of Ionic elements CSS Custom Properties
+.categories-list {
+  --ion-grid-column-padding: var(--page-categories-gutter);
+  text-align: center !important;
+  margin-bottom: 4vh;
+
+  padding: calc(var(--page-categories-gutter) * 3);
+  height: 100%;
+  align-content: flex-start;
+  overflow: scroll;
+
+  .category-item {
+    .category-anchor {
+      height: 100%;
+      text-decoration: none;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .category-title {
+        margin: auto;
+        margin-left: 10%;
+        margin-right: 10%;
+        position: absolute;
+        bottom: 0;
+        text-transform:lowercase;
+        font-weight: 400;
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding: 2px;
+        color: var(--ion-color-lightest);
+        background-color: var(--page-category-background);
+        border-radius: var(--app-fair-radius);
+        text-align: center !important;
+      }
+    }
+  }
+}
+
+ion-range::part(tick) {
+  background: #a2d2ff;
+}
+
+ion-range::part(tick-active) {
+  background: var(--ion-color-secondary);
+}
+
+ion-range::part(pin) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--ion-color-primary);
+  color: #fff;
+
+  border-radius: 50%;
+  transform: scale(1.01);
+
+  top: -20px;
+
+  min-width: 28px;
+  height: 28px;
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+ion-range::part(pin)::before {
+  content: none;
+}
+
+ion-range::part(knob) {
+  background: var(--ion-color-primary);
+}
+
+ion-range::part(bar) {
+  background: var(--ion-color-secondary);
+}
+
+ion-range::part(bar-active) {
+  background: var(--ion-color-secondary);
+}
+
+.km-filter{
+  ion-range{
+    padding-right: 10vw;
+  }
+  span{
+    padding-right: 6vw;
+    font-size: small;
+  }
+}
+
+.ion-text-center{
+  text-align: center;
+  ion-icon{
+    // padding-left: 5vw;
+    // padding-right: 5vw;
+    color: var(--ion-color-primary);
+    text-align: center;
+  }
+  span{
+    border: solid var(--ion-color-secondary);
+    border-radius: 15px;
+  }
+}
+
+span{
+  font-size: small;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  color: var(--ion-color-primary);
+}
+
+ion-modal#example-modal {
+  --width: fit-content;
+  --min-width: 250px;
+  --height: fit-content;
+  --border-radius: 6px;
+  --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+}
+
+ion-modal#example-modal h1 {
+  margin: 20px 20px 10px 20px;
+}
+
+ion-modal#example-modal ion-icon {
+  margin-right: 6px;
+
+  width: 48px;
+  height: 48px;
+
+  padding: 4px 0;
+
+  color: #aaaaaa;
+}
+
+ion-modal#example-modal .wrapper {
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+  ion-label{
+    margin-top: 4vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-size: small;
+    font-weight: bold;
+    color: var(--ion-color-primary);
+  }
+  ion-button{
+    margin-left: 2vw;
+    margin-right: 2vw;
+    --color: black;
+    --border-radius: 15px;
+    --border: var(--ion-color-secondary)
+  }
+  #yes{
+    --background: var(--ion-color-secondary)
+  }
+  #no{
+    --background: var(--ion-color-primary)
+  }
+}
+ion-select {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  --placeholder-color: var(--ion-color-primary);
+  --placeholder-opacity: 1;
+  width: 100%;
+}
+
+ion-select::part(placeholder),
+ion-select::part(text) {
+  flex: 0 0 auto;
+}
+
+ion-select::part(text) {
+  color: var(--ion-color-secondary);
+}
+
+ion-select::part(icon) {
+  color: var(--ion-color-secondary);
+  opacity: 1;
+}
+
+button.alert-button.alert-button-confirm {
+  background-color: var(--ion-color-success);
+  color: var(--ion-color-success-contrast);
+}
+
+.md button.alert-button.alert-button-confirm {
+  border-radius: 4px;
+}
+
+// .searchbar-search-icon {
+//   background-image: url("https://www.svgrepo.com/show/476890/map-marker.svg")!important;
+//   }
+ion-searchbar{
+  icon{
+    background-image: none;
+  }
+}
+
+.not-found-illust{
+  width: 45vw;
+  height: 25vh;
+}
+
+.ion-align-items-center{
+  text-align: center !important;
+  ion-text{
+    text-align: center !important;
+    font-size: small;
+  }
+}
+
+// .product-card{
+//   width: 100vw;
+//   height: 20vh;
+// }
+
+ion-img{
+  width: 20vw;
+  height: 30vh;
+}
+
+.displayed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ion-card{
+  width: 40vw;
+  height: 30vh;
+}
+
+ion-card-header{
+  width: 100%;
+  height: 70%;
+}
+
+ion-img{
+  width: 100%;
+  height: 80%;
+}
+
+ion-card-content{
+  text-align: center;
+  p{
+    font-size: x-small;
+    font-weight: bold;
+    margin: -10px !important;
+  }
+}

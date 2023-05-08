@@ -1,0 +1,26 @@
+<ion-content>
+  <ion-searchbar (ionBlur)="onCursorLeave()" (ionFocus)="onCursorAppear()" [(ngModel)]="keyWord" (ionChange)="onSearchInputChange($event)" color="primary" placeholder="Que cherchez-vous ?"></ion-searchbar>
+  <ion-list class="suggestions-list" [hidden]="apiService.productNames.length <= 0">
+    <ion-item  style="font-size: x-small;" (click)="onKeyWordClick(keyword)" lines="full" *ngFor="let keyword of apiService.productNames">
+      {{keyword}}
+    </ion-item>
+  </ion-list>
+  <ion-row *ngIf="showCategories && apiService.productNames.length === 0" class="categories-list">
+    <ion-item-divider>
+      <ion-label>
+        Les catégories
+      </ion-label>
+    </ion-item-divider>
+    <ion-col class="cat-list" size="4" *ngFor="let cat of categoryService.categories">
+          <div class="one-cat" (click)="onCategoryClick(cat.name)">
+          <img [src]="'../../../../assets/images/categories/' + cat.name + '.png' ">
+          <div class="cat-name-span">
+          <span>
+            {{'CATEGORY.' + cat.name + '.NAME' | translate}}
+          </span>
+        </div>
+        </div>
+    </ion-col>
+  </ion-row>
+</ion-content>
+

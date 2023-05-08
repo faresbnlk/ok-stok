@@ -1,0 +1,10 @@
+part : 91 [03:44]: 
+	make ion-icon close to span, no space betwenn each other : 
+
+	<ion-header>
+		<span>
+			example
+		</span>
+		<ion-icon name="icon-name"></ion-icon>
+	</ion-header>
+

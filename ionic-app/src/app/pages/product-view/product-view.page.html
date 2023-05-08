@@ -1,0 +1,95 @@
+<ion-content>
+  <ion-row class="buttons-row">
+    <ion-col size="3">
+      <ion-button fill="clear" (click)="onBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="6"></ion-col>
+    <ion-col size="3">
+      <ion-button (click)="onFavoriteClick()" fill="clear">
+        <ion-icon *ngIf="isFavorite" name="heart"></ion-icon>
+        <ion-icon *ngIf="!isFavorite" name="heart-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <div class="images">
+    <ion-img [src]="mainImg"></ion-img>
+    <ion-row class="ion-padding">
+      <ion-col size="2.4" *ngFor="let url of productImagesUrlsTests">
+        <ion-avatar [style.border-color]="changeAvatarBorder(url)">
+          <img [src]="url" (click)="onAvatarClick(url)">
+        </ion-avatar>
+      </ion-col>
+    </ion-row>
+  </div>
+  <ion-row class="name-price-row">
+    <ion-col class="product-name-col" size="8">
+      <ion-label>{{product!.name}}</ion-label>
+    </ion-col>
+    <ion-col class="product-price-col" size="4">
+      <ion-label>{{product!.price}}</ion-label><span style="color: black; margin: 1vw;"> {{appCurrency}}</span>
+    </ion-col>
+  </ion-row>
+  <ion-row class="rating-seller-row">
+
+    <ion-col class="seller-avatar" size="2">
+      <ion-avatar>
+        <img src='assets/seller.jpg'>
+      </ion-avatar>
+    </ion-col>
+
+    <ion-col size="5.5">
+      <ion-row>
+        <ion-col class="seller-name-col" size="9">
+          Boutique Anouar
+        </ion-col>
+        <ion-col class="rating-col">
+          <ion-col class="stars-col" *ngFor="let i of [0,1,2,3,4]" size="1">
+            <ion-icon [name]="i < product!.reviewsAverage ? 'star' : 'star-outline'" style="color: #FA711C;"></ion-icon>
+          </ion-col>
+          <ion-label>{{ ' ( ' + '54399' + ' )' }}</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+
+    <ion-col size="4.5" class="seller-contact">
+      <ion-button size="small" shape="round"> Discuter
+        <ion-icon name="chatbox-ellipses"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="add-to-cart-row">
+    <ion-col class="add-to-cart-col" size="12">
+      <ion-button shape="round">Ajouter au panier</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-accordion-group class="detail-accordion">
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label class="detail-accordion-label">Détails</ion-label>
+      </ion-item>
+      <div id="product-description" class="ion-padding" slot="content">
+        <ion-label>Description du produit :</ion-label>
+        <ion-text>{{' ' + product!.description}}</ion-text>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label class="detail-accordion-label">Pour vous</ion-label>
+      </ion-item>
+      <div id="product-description" class="ion-padding" slot="content">
+        <ion-label>Ces produits pourront vous intérésser :</ion-label>
+      </div>
+    </ion-accordion>
+    <ion-row class="add-to-cart-row">
+      <ion-col class="add-to-cart-col" size="12">
+        <ion-button shape="round" color="secondary">Partager
+          <ion-icon name="share-outline" style="color: aliceblue; padding-bottom: 1vh; padding-right: 1vw; padding-left: 1vw;"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-accordion-group>
+</ion-content>

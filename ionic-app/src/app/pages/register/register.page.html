@@ -1,0 +1,114 @@
+<ion-content>
+  <ion-card class="ion-no-margin">
+    <img src="../../../assets/images/bg-1.png" />
+    <ion-card-subtitle>{{'LOGIN.loginTitle' | translate}}</ion-card-subtitle>
+    <ion-card-content>
+      <ion-segment (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="phone">
+          <ion-icon name="call-sharp"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="email">
+          <ion-icon name="mail"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+      <div class="wrapform">
+        <form *ngIf="this.selectedForm === 'email'" [formGroup]="registerForm" class="register-form">
+          <ion-item lines="full">
+            <ion-label position="floating">E-mail</ion-label>
+            <ion-input type="email" id="email" [formControlName]="'email'" name="email" required autofocus></ion-input>
+            <span *ngIf="!registerForm.get('email')?.valid && registerForm.get('email')?.touched">
+              E-mail invalide !
+            </span>
+          </ion-item>
+          <ion-item lines="full">
+            <ion-label position="floating">Mot de passe</ion-label>
+            <ion-input *ngIf="showPassword" type="text" id="password" [formControlName]="'password'" name="password" required></ion-input>
+            <ion-icon (click)="hideShowPassword()" *ngIf="showPassword" slot="end" name="eye-outline"></ion-icon>
+            <ion-input *ngIf="!showPassword" type="password" id="password" [formControlName]="'password'" name="password" required></ion-input>
+            <ion-icon (click)="hideShowPassword()" *ngIf="!showPassword"slot="end" name="eye-off-outline"></ion-icon>
+            <span *ngIf="!registerForm.get('password')?.valid && registerForm.get('password')?.touched">
+              Le mot de passe trop court !
+            </span>
+          </ion-item>
+          <ion-item lines="full">
+            <ion-label position="floating">Confirmation</ion-label>
+            <ion-input *ngIf="showPassword" type="text" id="rePassword" [formControlName]="'rePassword'" name="rePassword" required></ion-input>
+            <ion-input *ngIf="!showPassword" type="password" id="rePassword" [formControlName]="'rePassword'" name="rePassword" required></ion-input>
+            <span *ngIf="registerForm.controls['rePassword'].hasError('NoPasswordMatch') && registerForm.get('rePassword')?.touched">
+              La confirmation est invalide !
+            </span>
+          </ion-item>
+          <ion-list style="font-family: poppins;">
+            <ion-item>
+              <ion-select formControlName = "profil" interface="popover" placeholder="Profil" [(ngModel)]="selectedProfil" required autofocus>
+                <ion-select-option value="wholesale">Grossiste</ion-select-option>
+                <ion-select-option value="retail">Détaillant</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        <ion-row *ngIf="!registerForm.get('profil')?.valid && registerForm.get('profil')?.touched" style="margin-top: -1rem;">
+          <ion-col style="margin-top: -1rem; text-align: center; margin-left: -1rem;">
+            <span style="margin-top: -1rem;"class="checkbox-span-error">Indiquez votre profil</span>
+          </ion-col>
+        </ion-row>
+        <div class="btn-div">
+          <ion-button fill="solid" type="submit" [disabled]="!this.registerForm.valid" class="login-btn" (click)="onSubmit()">
+            Valider
+          </ion-button>
+        </div>
+      </form>
+
+      <form *ngIf="this.selectedForm === 'phone'" [formGroup]="registerPhoneForm" class="register-form">
+        <ion-item lines="full">
+          <ion-label position="floating">{{'LOGIN.phoneInputLabel' | translate}}</ion-label>
+          <ion-input type="tel" id="phone" [formControlName]="'phone'" name="phone" required autofocus></ion-input>
+          <span *ngIf="!registerPhoneForm.get('phone')?.valid && registerPhoneForm.get('phone')?.touched">
+            {{'ERROR.phoneFormValidation' | translate}}
+          </span>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Mot de passe</ion-label>
+          <ion-input *ngIf="showPassword" type="text" id="password" [formControlName]="'password'" name="password" required></ion-input>
+          <ion-icon (click)="hideShowPassword()" *ngIf="showPassword" slot="end" name="eye-outline"></ion-icon>
+          <ion-input *ngIf="!showPassword" type="password" id="password" [formControlName]="'password'" name="password" required></ion-input>
+          <ion-icon (click)="hideShowPassword()" *ngIf="!showPassword"slot="end" name="eye-off-outline"></ion-icon>
+          <span *ngIf="!registerPhoneForm.get('password')?.valid && registerPhoneForm.get('password')?.touched">
+            Le mot de passe trop court !
+          </span>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Confirmation</ion-label>
+          <ion-input *ngIf="showPassword" type="text" id="rePassword" [formControlName]="'rePassword'" name="rePassword" required></ion-input>
+          <ion-input *ngIf="!showPassword" type="password" id="rePassword" [formControlName]="'rePassword'" name="rePassword" required></ion-input>
+          <span *ngIf="registerPhoneForm.controls['rePassword'].hasError('NoPasswordMatch') && registerPhoneForm.get('rePassword')?.touched">
+            La confirmation est invalide !
+          </span>
+        </ion-item>
+        <ion-list style="font-family: poppins;">
+          <ion-item>
+            <ion-select formControlName = "profil" interface="popover" placeholder="Profil" [(ngModel)]="selectedProfil" required autofocus>
+              <ion-select-option value="wholesale">Grossiste</ion-select-option>
+              <ion-select-option value="retail">Détaillant</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      <ion-row *ngIf="!registerPhoneForm.get('profil')?.valid && registerPhoneForm.get('profil')?.touched" style="margin-top: -1rem;">
+        <ion-col style="margin-top: -1rem; text-align: center; margin-left: -1rem;">
+          <span style="margin-top: -1rem;"class="checkbox-span-error">Indiquez votre profil</span>
+        </ion-col>
+      </ion-row>
+      <div class="btn-div">
+        <ion-button fill="solid" type="submit" [disabled]="!this.registerPhoneForm.valid" class="login-btn" (click)="onSubmitPhone()">
+          Valider
+        </ion-button>
+      </div>
+      </form>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <div class="text-tag">
+    <span>
+      Déjà inscrit ? <a [routerLink]="['/pages/login']">Cennectez-vous</a>
+    </span>
+  </div>
+</ion-content>

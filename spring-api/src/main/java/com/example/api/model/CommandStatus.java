@@ -1,0 +1,14 @@
+package com.example.api.model;
+
+public enum CommandStatus {
+    ORDER_CANCELLED,
+    ORDER_DELIVERED,
+    ORDER_INTRANSIT,
+    ORDER_PAYMENTDUE,
+    ORDER_PICKUPAVAILABLE,
+    ORDER_PROBLEM,
+    ORDER_PROCESSING,
+    ORDER_RETURNED,
+    ORDER_READY,
+    ORDER_PICKED
+}

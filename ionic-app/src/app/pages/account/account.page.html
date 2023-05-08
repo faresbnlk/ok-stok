@@ -1,0 +1,62 @@
+<ion-content>
+  <div *ngIf="!this.loggedIn">
+    <ion-card class="ion-no-margin">
+      <img src="../../../assets/images/bg-home.png" alt="Hello image" />
+      <ion-card-header>
+        <ion-card-subtitle>{{'HOME.notConnected' | translate }}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <div class="btn-div" style="margin-bottom: 1rem;">
+      <ion-button fill="solid" class="login-btn" [routerLink]="['/pages/login']">
+        Se connecter
+      </ion-button>
+    </div>
+    <div class="btn-div">
+      <ion-button fill="solid" class="login-btn" [routerLink]="['/pages/register']">
+        Créer un compte
+      </ion-button>
+    </div>
+  </div>
+<div *ngIf="this.loggedIn">
+  <div>
+      <div *ngIf="dataIsLoading" class="loader">
+    </div>
+  <h1>
+    Welcome to your account !
+  </h1>
+  <div *ngIf="!dataIsLoading && loggedIn" class="btn-div" style="margin-bottom: 1rem;">
+    <ion-item>
+      <ion-label>Id : </ion-label>
+      {{currentUser.id}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Nom : </ion-label>
+      {{currentUser.name}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Email : </ion-label>
+      {{currentUser.email}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Phone : </ion-label>
+      {{currentUser.phone}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Email verified : </ion-label>
+      {{currentUser.verifiedUser}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Image url : </ion-label>
+      {{currentUser.imageUrl}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Roles : </ion-label>
+      {{currentUserRoles}}
+    </ion-item>
+    <ion-button fill="solid" class="login-btn" (click)="logout()">
+      Se déconnecter
+    </ion-button>
+  </div>
+  </div>
+</div>
+</ion-content>

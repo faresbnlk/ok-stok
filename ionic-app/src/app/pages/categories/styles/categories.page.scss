@@ -1,0 +1,167 @@
+@import "../../../../theme/mixins/scrollbars";
+
+// Custom variables
+// Note:  These ones were added by us and have nothing to do with Ionic CSS Custom Properties
+:host {
+  --page-margin: var(--app-narrow-margin);
+
+  --page-categories-gutter: calc(var(--page-margin) / 4);
+
+  --page-category-background: var(--ion-color-medium);
+  --page-category-background-rgb: var(--ion-color-medium-rgb);
+}
+
+ion-searchbar{
+  border-radius: 5px;
+}
+ion-item-divider{
+  ion-label{
+    text-align: center !important;
+    color: #000;
+  }
+  text-align: center !important;
+  background-color: var(--ion-color-secondary);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+
+  // box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.suggestions-list{
+  font-size: small;
+  margin-top: -1vh;
+  margin-bottom: 1vh;
+  ion-item{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    // padding-top: 0;
+    // height: 5vh;
+  }
+}
+
+.one-cat{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+  border-radius: 10px;
+  border: solid var(--ion-color-primary);
+  height: 10vh;
+  width: 20vw;
+  text-align: center !important;
+  img{
+    height: auto;
+    width: auto;
+  }
+  margin-top: 3vh;
+}
+
+.cat-list{
+  padding-top: 2vh;
+  padding-left: 6vw;
+  text-align: center !important;
+}
+
+.cat-name-span{
+  // padding: 30px 40px;
+  text-align: center !important;
+  position: absolute;
+  bottom: -3vh;
+  margin: auto;
+  text-align: center;
+  width: inherit;
+  left: 0;
+  right: 0;
+  font-size: 4vw;
+  font-size: 1.1vh;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  word-break: break-word;
+  white-space: pre-wrap;
+  -moz-white-space: pre-wrap;
+  // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+  // border: none;
+  // border-radius: 10px;
+  // padding-bottom: 10px !important;
+  // background-color: #8fc873;
+  // font-size: 4vw;
+  // font-size: 1.1vh;
+  // text-align: center;
+  // color: #000;
+  // font-weight: bold;
+  // margin: 0;
+  // padding-bottom: 0 !important;
+}
+
+
+// Note:  All the CSS variables defined below are overrides of Ionic elements CSS Custom Properties
+.categories-list {
+  --ion-grid-column-padding: var(--page-categories-gutter);
+  text-align: center !important;
+  margin-bottom: 4vh;
+
+  padding: calc(var(--page-categories-gutter) * 3);
+  height: 100%;
+  align-content: flex-start;
+  overflow: scroll;
+
+  @include hide-scrollbars();
+
+  .category-item {
+    .category-anchor {
+      height: 100%;
+      text-decoration: none;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .category-title {
+        margin: auto;
+        margin-left: 10%;
+        margin-right: 10%;
+        position: absolute;
+        bottom: 0;
+        text-transform:lowercase;
+        font-weight: 400;
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding: 2px;
+        //padding: calc((var(--page-margin) / 10) * 1) var(--page-margin);
+        color: var(--ion-color-lightest);
+        background-color: var(--page-category-background);
+        border-radius: var(--app-fair-radius);
+        text-align: center !important;
+      }
+    }
+  }
+
+  .travel-category {
+    --page-category-background: #00AFFF;
+    --page-category-background-rgb: 0,175,255;
+  }
+
+  .fashion-category {
+    ion-card, ion-card-content{
+      span{
+      font-size: x-small;
+      }
+      text-align: center;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+    }
+    --page-category-background: #cb328f;
+    --page-category-background-rgb: 203,50,143;
+  }
+
+  .food-category {
+    --page-category-background: #ebbb00;
+    --page-category-background-rgb: 235,187,0;
+  }
+
+  .deals-category {
+    --page-category-background: #70df70;
+    --page-category-background-rgb: 112,223,112;
+  }
+
+  .real-estate-category {
+    --page-category-background: #d9453a;
+    --page-category-background-rgb: 217,69,58;
+  }
+}
